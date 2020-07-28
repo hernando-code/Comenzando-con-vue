@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
-    
+    <div id="app"><!-- dentro de este div ira todo lo que contiene la app -->
+        <h1>{{titulo}}</h1><!-- para usar lo creado en js usamos {{pripiedad dentro de data}} -->
 
+        <ul>
+            <li v-for="fruta of frutas">{{fruta}}</li><!-- fruta tomara los valores dentro del array frutas y creara los li necesarios para mostrar todo el contenido del array frutas -->
+        </ul>
+
+        <ul>
+            <li v-for="frutas of fruit">
+                {{frutas.nombre}} - {{frutas.cantidad}}
+                <span v-if="frutas.cantidad === 0 ">sin stock</span>
+            </li>
+        </ul>
+    </div><!-- se debe tener un contenedor -->
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="vue.js"></script>
 </body>
 </html>
